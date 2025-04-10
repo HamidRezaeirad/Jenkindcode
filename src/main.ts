@@ -18,10 +18,10 @@ async function bootstrap() {
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api-docs', app, document);
 
-  await app.listen(process.env.PORT, () => {
-    console.log(`Server is running on port ${process.env.PORT}`);
+  await app.listen(process.env.PORT || 3000, () => {
+    console.log(`Server is running on port ${process.env.PORT || 3000}`);
     console.log(
-      `Swagger docs are available at http://localhost:${process.env.PORT}/api-docs`,
+      `Swagger docs are available at http://localhost:${process.env.PORT || 3000}/api-docs`,
     );
   });
 }
