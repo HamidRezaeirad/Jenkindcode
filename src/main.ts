@@ -19,7 +19,7 @@ async function bootstrap() {
   SwaggerModule.setup('api-docs', app, document);
 
   await app.listen(process.env.PORT || 3000, () => {
-    console.log(`Server is running on port ${process.env.PORT || 3000}`);
+    console.log(`Server is running on port ===== ${process.env.PORT || 3000}`);
     console.log(
       `Swagger docs are available at http://localhost:${process.env.PORT || 3000}/api-docs`,
     );
